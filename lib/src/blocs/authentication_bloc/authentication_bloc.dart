@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
-
 import '../../repositories/repository.dart';
 import './authentication_event.dart';
 import './authentication_state.dart';
@@ -16,19 +15,6 @@ class AuthenticationBloc
 
   @override
   AuthenticationState get initialState => Uninitialized();
-
-  @override
-  Stream<AuthenticationState> mapEventToState(
-    AuthenticationEvent event,
-  ) async* {
-    if (event is AppStarted) {
-      yield* _mapAppStartedToState();
-    } else if (event is LoggedIn) {
-      yield* _mapLoggedInToState();
-    } else if (event is LoggedOut) {
-      yield* _mapLoggedOutToState();
-    }
-  }
 
   Stream<AuthenticationState> _mapAppStartedToState() async* {
     try {
@@ -51,5 +37,19 @@ class AuthenticationBloc
   Stream<AuthenticationState> _mapLoggedOutToState() async* {
     yield Unauthenticated();
     _userRepository.signOut();
+  }
+
+  @override
+  Stream<AuthenticationState> mapEventToState(
+    AuthenticationEvent event,
+  ) async* {
+    //yield* es como un retorno sin salir de la funcion ya que es stream
+    if (event is AppStarted) {
+      yield* _mapAppStartedToState();
+    } else if (event is LoggedIn) {
+      yield* _mapLoggedInToState();
+    } else if (event is LoggedOut) {
+      yield* _mapLoggedOutToState();
+    }
   }
 }

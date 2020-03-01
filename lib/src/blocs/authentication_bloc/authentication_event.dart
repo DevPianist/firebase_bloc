@@ -1,5 +1,3 @@
-// part of 'authentication_bloc.dart';
-
 import 'package:equatable/equatable.dart';
 
 abstract class AuthenticationEvent extends Equatable {

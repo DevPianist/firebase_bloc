@@ -15,11 +15,13 @@ dependencies:
   equatable: ^1.1.0
   font_awesome_flutter: ^8.7.0
   google_sign_in: ^4.1.4
-  firebase_auth:
+  firebase_auth: ^0.15.5+2
+  # firebase_auth: 0.15.4
   custom_splash: ^0.0.2
-
+  
   cupertino_icons: ^0.1.2
-
+# dependency_overrides:
+#   firebase_core: 0.4.4
 dev_dependencies:
   flutter_test:
     sdk: flutter

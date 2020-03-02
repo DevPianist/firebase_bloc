@@ -41,8 +41,6 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>UIStatusBarHidden</key>
-	<true/>
 	<!-- Google Sign-in Section -->
 	<key>CFBundleURLTypes</key>
 	<array>
@@ -53,11 +51,10 @@
 			<array>
 				<!-- TODO Replace this value: -->
 				<!-- Copied from GoogleService-Info.plist key REVERSED_CLIENT_ID -->
-				<string>com.googleusercontent.apps.861823949799-vc35cprkp249096uujjn0vvnmcvjppkn</string>
+				<string>com.googleusercontent.apps.298873859731-i0srl75tgfjl2d2h6t1ce8ocoqmb52e3</string>
 			</array>
 		</dict>
 	</array>
 	<!-- End of the Google Sign-in Section -->
-
 </dict>
 </plist>
